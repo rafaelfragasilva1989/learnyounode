@@ -1,5 +1,7 @@
 const fs = require ('fs');
 
-fs.readFileSync('\Users\Usuarios\AppData\Roaming\npm\node_modules\learnyounode\docs-nodejs\buffer.html').split('\n'),
+const buffer = fs.readFileSync(process.argv[2]);
 
-const str = buf.toString();
+const result = buffer.toString().split('\n').length - 1;
+
+console.log(result);
